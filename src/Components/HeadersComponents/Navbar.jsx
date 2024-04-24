@@ -20,7 +20,7 @@ export default function Navbar() {
         </Typography>
         <Hidden smDown>
         <Box >
-          {navLinks.map((link, i) => <Button color="inherit" className={classes.navLinks}>{link.label}</Button>)}
+          {navLinks.map((link, i) => <Button key={link.id} color="inherit" className={classes.navLinks}>{link.label}</Button>)}
         </Box>
         </Hidden>
         <Hidden smUp>

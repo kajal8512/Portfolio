@@ -1,6 +1,6 @@
 // import React from 'react';
 import { makeStyles } from '@mui/styles';
-import { Theme } from './Theme';
+import { Theme } from '../Theme';
 import Image from '../../Images/profile-img1.jpg';
 
 export const useStyles = makeStyles((theme)=>({
@@ -17,7 +17,7 @@ export const useStyles = makeStyles((theme)=>({
       justifyContent:'center',
       color:Theme.colors.base2,
       padding: '1.5rem',
-      width: '85%',
+      width: '80%',
       height:'100%',
       fontFamily:"roboto",
       left:'2rem',
@@ -51,16 +51,17 @@ export const useStyles = makeStyles((theme)=>({
         margin:'0.5rem',
       },
     },
-    devoratorText:{
+    decoratorText:{
       lineHeight:'53px',
       position:'absolute',
-      left:'32px',
+      left:'30px',
     },
 
     arrow:{
       lineHeight:'53px',
       position:'absolute',
-      left:'94px',
+      left:'98px',
+      marginTop:'2px',
       animationName:'upDown',
       animationDuration:'0.7s',
       animationIterationCount:'infinite',
