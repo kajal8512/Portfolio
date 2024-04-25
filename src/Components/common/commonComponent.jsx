@@ -1,7 +1,7 @@
 import React from "react";
-import {Box, Typography} from '@mui/material/';
+import {Box, Typography,Grid, Avatar} from '@mui/material/';
 import { useStyles } from "../HeadersComponents/HeardersStyle";
-import { useStyles as BodyStyle } from "../BodyComponent/BodyStyle"
+import { useStyles as BodyStyle } from "../BodyComponent/BodyStyle";
 
 export const Docorator = ({label, withIcon, Icon, styles}) => {
     const classes = useStyles();
@@ -15,9 +15,7 @@ export const Docorator = ({label, withIcon, Icon, styles}) => {
 
 export const Divider = () => {
   const classes = BodyStyle();
-  return(
-    <span className={classes.divider}></span>
-  )
+  return <span className={classes.divider} />;
 }
 
 export const RenderSectionHeading = ({smallText, heading,description, alignCenter}) => {
@@ -26,8 +24,25 @@ export const RenderSectionHeading = ({smallText, heading,description, alignCente
       <Box>
       {Docorator({label:smallText, withIcon:false, styles:alignCenter ?{width:"100px", margin:"10px auto"}:{}})}
       <Typography variant="h4" align={alignCenter ? "center": "left"} className={classes.sectionHeading}>{heading}</Typography>
-      {Divider()}
+      <Divider />
       <Typography variant="body1" align={alignCenter ? "center": "left"} className={classes.sectionDescription}>{description}</Typography>
       </Box>
     )
+}
+
+export const CardMedia = ({label,desc, Icon,key}) => {
+const classes = BodyStyle();
+return(
+<Box>
+  <Grid container className={classes.cardCon}  key={key}>
+    <Grid item xs={3} className={classes.AvatarCont}>
+      <Avatar className={classes.avatarColor}>{Icon}</Avatar>
+    </Grid>
+    <Grid item xs={9} className={classes.MediaText}>
+      <Typography variant="body1" component='h6'>{label} </Typography>
+      <Typography variant="caption" gutterBottom>{desc} </Typography>
+    </Grid>
+  </Grid>
+  </Box>
+)
 }

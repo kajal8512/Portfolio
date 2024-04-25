@@ -5,17 +5,22 @@ export const useStyles = makeStyles((theme) => ({
     section:{
         backgroundColor: Theme.colors.base1,
         width: '98.5%',
-        height: '80vh',
+        // height: '80vh',
+        height:"auto",
         padding: '10px',
         color: Theme.colors.base2,
         // border: '2px solid black', // Add this line
     },
     // common
     divider:{
-        width: '65px',
+        display: 'block',
+        width: '75px',
         height: '4px',
-        backgroundColor: Theme.colors.primary   ,
-        // margin: '10px 0'
+        backgroundColor: "#E6A4B4",
+        marginTop: '10px'
+    },
+    sectionDescription:{
+       padding: '8px 0px',
     },
     // AboutUs
     /*divided:{
@@ -24,7 +29,23 @@ export const useStyles = makeStyles((theme) => ({
     },*/
     responsiveImg:{
         width:'100%',
-        height:'500px',
+        height:'auto',
         marginTop: '10px',
-    }
+    },
+    AvatarCont:{
+        display: 'flex',
+        flexFlow: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        // padding: '10px'
+    },
+    avatarColor: {
+        color: `${Theme.colors.base2} !important`,
+        backgroundColor: `${Theme.colors.primary} !important`,
+      },
+    cardCon:{
+        padding: '25px 10px',
+        fontSize: '1.2rem',
+        fontFamily:'-moz-initial' 
+    },
 }));
