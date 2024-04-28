@@ -1,7 +1,12 @@
-import { createRoot } from "react-dom/client"; // Correct import
-
-import "./index.css";
+import { createRoot } from "react-dom/client";
+import { ThemeProvider, createTheme } from "@material-ui/core/styles";
 import App from "./App";
 
-const root = createRoot(document.getElementById("root")); // Use createRoot
-root.render(<App />);
+const theme = createTheme();
+const root = document.getElementById("root");
+
+createRoot(root).render(
+  <ThemeProvider theme={theme}>
+    <App />
+  </ThemeProvider>
+);

@@ -13,9 +13,9 @@ export const Docorator = ({label, withIcon, Icon, styles}) => {
     )
 }
 
-export const Divider = () => {
+export const Divider = ({style}) => {
   const classes = BodyStyle();
-  return <span className={classes.divider} />;
+  return <span className={classes.divider} style={style}/>;
 }
 
 export const RenderSectionHeading = ({smallText, heading,description, alignCenter}) => {
@@ -24,7 +24,7 @@ export const RenderSectionHeading = ({smallText, heading,description, alignCente
       <Box>
       {Docorator({label:smallText, withIcon:false, styles:alignCenter ?{width:"100px", margin:"10px auto"}:{}})}
       <Typography variant="h4" align={alignCenter ? "center": "left"} className={classes.sectionHeading}>{heading}</Typography>
-      <Divider />
+      {Divider({style:alignCenter ? {margin:"10px auto"}:{margin:"10px 0"}})}
       <Typography variant="body1" align={alignCenter ? "center": "left"} className={classes.sectionDescription}>{description}</Typography>
       </Box>
     )
