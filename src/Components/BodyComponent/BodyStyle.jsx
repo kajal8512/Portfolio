@@ -45,7 +45,7 @@ export const useStyles = makeStyles((theme) => ({
     responsiveImg:{
         width:'100%',
         height:'auto',
-        marginTop: '10px',
+        marginTop: '20px',
     },
     AvatarCont:{
         display: 'flex',
@@ -92,6 +92,14 @@ export const useStyles = makeStyles((theme) => ({
         marginBottom: '10px',
         [theme.breakpoints.down('sm')]: {
             fontSize: '0.5rem',
+        },
+    },
+
+    submitbtn:{
+        color: `${Theme.colors.base2} !important`,
+        backgroundColor: `${Theme.colors.primary} !important`,
+        '&:hover': {
+            backgroundColor: `${Theme.colors.primary1} !important`,
         },
     }
 }));
