@@ -1,4 +1,3 @@
-// import React from 'react';
 import { makeStyles } from '@mui/styles';
 import { Theme } from '../Theme';
 import Image from '../../Images/profile-img1.jpg';
@@ -24,15 +23,9 @@ export const useStyles = makeStyles((theme)=>({
     },
     heardeTitle:{
       fontSize: '3rem',
-      // [theme.breakpoints.down('xs')]: {
-      //   fontSize: '2rem',
-      // },
     },
     heardeDesc:{
       fontSize: '1.5rem !important',
-      // [theme.breakpoints.down('xs')]: {
-      //   fontSize: '1rem',
-      // },
     },
     // decorator
     decorator:{
@@ -85,11 +78,19 @@ export const useStyles = makeStyles((theme)=>({
       color:Theme.colors.base2,
       fontFamily:"roboto",
     },
-    navLinks:{
-      color:Theme.colors.base2,
-    },
   toolbar:{
     display:'flex',
     justifyContent:'space-between',
   },
+
+  // drawer
+  drawerContainer:{
+    width:'250px',
+    height:'100vh',
+    backgroundColor:Theme.colors.primary1,
+    color:Theme.colors.base2,
+  },
+  listItem:{
+    color:Theme.colors.base2,
+  }
 }));

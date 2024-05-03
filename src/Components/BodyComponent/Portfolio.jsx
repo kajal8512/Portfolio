@@ -8,6 +8,7 @@ import Images3 from '../../Images/sc3.png';
 import Images4 from '../../Images/sc4.png';
 import Images5 from '../../Images/sc5.png';
 import Images6 from '../../Images/sc6.png';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 export default function Portfolio() {
     const classes = useStyles();
@@ -50,21 +51,23 @@ export default function Portfolio() {
                 {RenderSectionHeading({smallText:"PORTFOLIO",heading:"Let's See My Work", alignCenter:true})}
             </Grid>
         </Grid>
-        <Container maxWidth="xl">
-          <Grid container spacing={2}>
-              {PortfolioImg.map((item, i) => (
-                  <Grid item xs={6} sm={6} lg={4} key={i}>
-                    <Box className={classes.imageContainer}>
-                      <img src={item.url} alt={item.title} className={classes.responsiveImg}/>
-                      <Box className={classes.imageOverlay}>
-                        <Typography className={classes.overlayTittle}>{item.title}</Typography>
-                        <Button variant="contained">Visit</Button>
+        <ScrollAnimation animateIn="fadeIn">
+          <Container maxWidth="xl">
+            <Grid container spacing={2}>
+                {PortfolioImg.map((item, i) => (
+                    <Grid item xs={6} sm={6} lg={4} key={i}>
+                      <Box className={classes.imageContainer}>
+                        <img src={item.url} alt={item.title} className={classes.responsiveImg}/>
+                        <Box className={classes.imageOverlay}>
+                          <Typography className={classes.overlayTittle}>{item.title}</Typography>
+                          <Button variant="contained">Visit</Button>
+                        </Box>
                       </Box>
-                    </Box>
-                </Grid>
-              ))}
-            </Grid>
-       </Container>
+                  </Grid>
+                ))}
+              </Grid>
+          </Container>
+        </ScrollAnimation>
     </Box>
   )
 }

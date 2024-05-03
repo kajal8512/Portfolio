@@ -2,16 +2,11 @@ import React from 'react'
 import { AppBar, Toolbar, Typography, Button, Box, Hidden, IconButton } from '@mui/material';
 import { useStyles } from "./HeardersStyle";
 import MenuOpenRoundedIcon from '@mui/icons-material/MenuOpenRounded';
+import {Link}  from "react-scroll";
 
-
-
-export default function Navbar() {
+export default function Navbar({navlinks, handleDrawerToogler}) {
   const classes = useStyles();
-  const navLinks = [
-    { label: "About",id:"About", path: "/about" },
-    { label: "Portfolio", id:"Portfolio", path: "/portfolio" },
-    { label: "Contact",id:"Contact", path: "/contact" },
-  ];
+
   return (
     <AppBar position="fixed" >
     <Toolbar className={classes.navbar1} >
@@ -20,12 +15,28 @@ export default function Navbar() {
         </Typography>
         <Hidden smDown>
         <Box >
-          {navLinks.map((link, i) => <Button key={link.id} color="inherit" className={classes.navLinks}>{link.label}</Button>)}
+          {navlinks.map((item, i) =>(
+          <Link 
+            key={i} 
+            activeClass="active"
+            to={`${item.Id}`}
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            <Button 
+              color="inherit" 
+              className={classes.navLinks}
+            >
+              {item.label}
+            </Button>
+          </Link>))}
         </Box>
         </Hidden>
         <Hidden smUp>
         <Box >
-        <IconButton sx={{color:'inherit'}} onClick={()=>console.log("manu clicked")}>
+        <IconButton sx={{color:'inherit'}} onClick={handleDrawerToogler}>
           <MenuOpenRoundedIcon />
         </IconButton>
         </Box>

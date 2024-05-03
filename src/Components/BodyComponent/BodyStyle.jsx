@@ -101,5 +101,18 @@ export const useStyles = makeStyles((theme) => ({
         '&:hover': {
             backgroundColor: `${Theme.colors.primary1} !important`,
         },
+    },
+   footerContainer:{
+        backgroundColor: Theme.colors.primary1,
+        color: Theme.colors.base2,
+        padding: "10px 0px",
+        position: 'relative', 
+    },
+    iconButton:{
+        position: 'absolute !important', 
+        right: '20px',
+        top: '-24px',
+        color:  `${Theme.colors.base2} !important`,
+        backgroundColor:`${Theme.colors.primary} !important`,
     }
 }));
