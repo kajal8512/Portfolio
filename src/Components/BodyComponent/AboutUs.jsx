@@ -28,7 +28,7 @@ export default function AboutUs() {
                     <Grid item sm={5}  > 
                         <Hidden smDown>
                             <Box>
-                                <img src={Image} alt="Office" className={classes.responsiveImg}/>
+                                <img src={Image} alt="Office" className={classes.responsiveImg2}/>
                             </Box>
                         </Hidden>
                     </Grid>

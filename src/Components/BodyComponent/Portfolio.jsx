@@ -2,12 +2,12 @@ import React from 'react'
 import { Box, Grid, Container, Typography, Button} from "@mui/material";
 import { useStyles} from "../BodyComponent/BodyStyle";
 import {RenderSectionHeading} from "../common/commonComponent";
-import Images1 from '../../Images/sc1.png';
-import Images2 from '../../Images/sc2.png';
-import Images3 from '../../Images/sc3.png';
-import Images4 from '../../Images/sc4.png';
-import Images5 from '../../Images/sc5.png';
-import Images6 from '../../Images/sc6.png';
+import Images1 from '../../Images/gallery.png';
+import Images2 from '../../Images/TODO.png';
+import Images3 from '../../Images/MongoDB.jpg';
+import Images4 from '../../Images/BMI Cal.png';
+import Images5 from '../../Images/netflix.png';
+import Images6 from '../../Images/GitHub_repo.png';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 export default function Portfolio() {
@@ -15,35 +15,38 @@ export default function Portfolio() {
     const PortfolioImg =[
       {
         url:Images1,
-        title:"Portfolio",
-        link:""
+        title:"Gallery",
+        link:"https://friendly-nasturtium-7c3ef4.netlify.app/"
       },
       {
         url:Images2,
-        title:"Portfolio",
-        link:""
+        title:"TODO",
+        link:"https://spectacular-cuchufli-41d05c.netlify.app/"
       },
       {
         url:Images3,
-        title:"Portfolio",
-        link:""
+        title:"MongoDB",
+        link:"https://github.com/kajal8512/mongodb_project"
       },
       {
         url:Images4,
-        title:"Portfolio",
-        link:""
+        title:"BMI Calculator",
+        link:"https://lively-beijinho-e29404.netlify.app/"
       },
       {
         url:Images5,
-        title:"Portfolio",
-        link:""
+        title:"Netflix",
+        link:"https://github.com/kajal8512/Netflix_Page"
       },
       {
         url:Images6,
-        title:"Portfolio",
-        link:""
+        title:"GitHub Repo",
+        link:"https://visionary-blancmange-e8dcb2.netlify.app/"
       },
     ]
+   const handleVisit = (url) => {
+    window.open(url);
+  }
   return (
     <Box className={classes.sectionDark} id="Portfolio">
         <Grid container className={classes.GridCenter}>
@@ -60,7 +63,7 @@ export default function Portfolio() {
                         <img src={item.url} alt={item.title} className={classes.responsiveImg}/>
                         <Box className={classes.imageOverlay}>
                           <Typography className={classes.overlayTittle}>{item.title}</Typography>
-                          <Button variant="contained">Visit</Button>
+                          <Button variant="contained" onClick={()=>handleVisit(item.link)}>Visit</Button>
                         </Box>
                       </Box>
                   </Grid>

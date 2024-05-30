@@ -45,6 +45,11 @@ export const useStyles = makeStyles((theme) => ({
     },*/
     responsiveImg:{
         width:'100%',
+        height:'270px',
+        marginTop: '20px',
+    },
+    responsiveImg2:{
+        width:'100%',
         height:'auto',
         marginTop: '20px',
     },
