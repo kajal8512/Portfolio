@@ -1,11 +1,9 @@
 import React from 'react'
-import {Box, Typography, IconButton} from '@material-ui/core';
+import {Box, Typography, IconButton} from '@mui/material';
 import { useStyles } from "./BodyStyle";
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import {Link}  from "react-scroll";
-
-
 
 export default function Footer() {
     const classes = useStyles();

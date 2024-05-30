@@ -1,6 +1,7 @@
+// import { makeStyles } from '@mui/styles';
 import { makeStyles } from '@mui/styles';
-import { Theme } from '../Theme';
 import Image from '../../Images/profile-img1.jpg';
+import { Theme } from "../Theme";
 
 export const useStyles = makeStyles((theme)=>({
     HeardeWraper: {

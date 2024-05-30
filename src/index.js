@@ -1,12 +1,19 @@
-import { createRoot } from "react-dom/client";
-import { ThemeProvider, createTheme } from "@material-ui/core/styles";
-import App from "./App";
+import { createRoot } from 'react-dom/client';
+import { ThemeProvider } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
+import App from './App';
 
 const theme = createTheme();
-const root = document.getElementById("root");
+const rootElement = document.getElementById('root');
 
-createRoot(root).render(
-  <ThemeProvider theme={theme}>
-    <App />
-  </ThemeProvider>
-);
+if (rootElement) {
+  const root = createRoot(rootElement);
+  root.render(
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+  );
+} else {
+  console.error("Root element not found");
+}
+
