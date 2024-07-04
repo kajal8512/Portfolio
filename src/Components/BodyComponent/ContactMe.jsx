@@ -37,7 +37,7 @@ export default function ContactMe() {
     return(
         <Box className={classes.section} id="Contact">
             <ScrollAnimation animateIn="fadeIn">
-                <Grid container spacing={2}>
+                <Grid container spacing={4}>
                 {/*className={classes.divided} */}
                     <Grid item sm={4}  > 
                         <Hidden smDown>

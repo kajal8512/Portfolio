@@ -8,7 +8,7 @@ export default function Navbar({navlinks, handleDrawerToogler}) {
   const classes = useStyles();
 
   return (
-    <AppBar position="fixed" >
+    <AppBar position="relative" >
     <Toolbar className={classes.navbar1} >
         <Typography variant="h5" component="h5" sx={{ flexGrow: 1 }}>
         {"<GreateCoder/>"}
